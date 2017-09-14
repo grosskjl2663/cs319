@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Task 3</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <form name="orderform" action="#" method="get">
+            <p>
+                Drink Type:<br>
+                <input type="radio" name="drinktype" value="americano" id="americano">Americano<br>
+                <input type="radio" name="drinktype" value="cuppuccino" id="cuppuccino">Cuppuccino<br>
+                <input type="radio" name="drinktype" value="latte" id="latte">Latte<br>
+                <input type="radio" name="drinktype" value="macchiato" id="macchiato">Macchiato<br>
+                <input type="radio" name="drinktype" value="mocha" id="mocha">Mocha<br>
+            </p>
+            <p>
+                Size:
+                <select name="size">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </p>
+            <p>
+                Flavors and Extras:<br>
+                <input type="checkbox" name="extras" value="espressoshot" id="espressoshot">Extra Espresso Shot<br>
+                <input type="checkbox" name="extras" value="caramelshot" id="caramelshot">Caramel Shot<br>
+                <input type="checkbox" name="extras" value="hazelnutshot" id="hazelnutshot">Hazelnut Shot<br>
+                <input type="checkbox" name="extras" value="vanillashot" id="vanillashot">Vanilla Shot
+            </p>
+            <p>
+                Order For (name):
+                <input type="text" name="name">
+            </p>
+            <p>
+                <input type="button" value="Order!" class="order">
+            </p>
+        </form> 
+    </body>
+</html>
