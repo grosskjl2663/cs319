@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Unit 3 Exercise</title>
+    </head>
+    <body>
+        <h1>Calculator</h1>
+        <script>
+            function addNumbers() {
+                var x;
+                var y;
+                var ans;
+                
+                x = 7;
+                y = 4;
+                
+                ans = x + y;
+                
+                document.getElementById("equation").innerHTML = x + " plus " + y + " equals " + ans + "!";
+            }
+            
+            function subtractNumbers() {
+                var x;
+                var y;
+                var ans;
+                
+                x = 15;
+                y = 3;
+                
+                ans = x - y;
+                
+                document.getElementById("equation").innerHTML = x + " minus " + y + " equals " + ans + "!";
+            }
+            
+            function multiplyNumbers() {
+                var x;
+                var y;
+                var ans;
+                
+                x = 8;
+                y = 2;
+                
+                ans = x * y;
+                
+                document.getElementById("equation").innerHTML = x + " times " + y + " equals " + ans + "!";
+            }
+            
+            function divideNumbers() {
+                var x;
+                var y;
+                var ans;
+                
+                x = 25;
+                y = 5;
+                
+                ans = x / y;
+                
+                document.getElementById("equation").innerHTML = x + " divided by " + y + " equals " + ans + "!";
+            }
+        </script>
+        <p id="equation"></p>
+        <form name="calculator" action="#" method="get">
+            <input type="button" name="addition" value="Add" onclick="addNumbers();">
+            <input type="button" name="subtraction" value="Subtract" onclick="subtractNumbers();">
+            <input type="button" name="multiplication" value="Multiply" onclick="multiplyNumbers();">
+            <input type="button" name="division" value="Divide" onclick="divideNumbers();">
+        </form>
+    </body>
+</html>
