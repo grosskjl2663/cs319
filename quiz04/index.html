@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Unit 4 Quiz</title>
+    </head>
+    <body>
+        <script>
+            function showValue() {
+                var favoriteAnimal;
+                
+                favoriteAnimal = document.getElementById("animal").value;
+                alert(favoriteAnimal);
+            }
+        </script>
+        <form name="questionnaire" id="question" action="#" method="get">
+            <p>What is your favorite animal? <input type="text" name="favoriteAnimal" id="animal"></p>
+            <input type="button" name="submit" id="go" value="Submit!" onclick="showValue();">
+        </form>
+    </body>
+</html>
