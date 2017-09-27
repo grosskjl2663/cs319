@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Unit 4 Exercise</title>
+    </head>
+    <body>
+        <script>
+            function performMadlib() {
+                var animal = document.madlib.favAnimal.value;
+                var age = document.madlib.age.value;
+                var color = document.madlib.favColor.value;
+                var dessert = document.madlib.favDessert.value;
+                
+                //alert(animal);
+                //alert(age);
+                //alert(color);
+                //alert(dessert);
+                
+                document.getElementById("words").innerHTML = "Once upon a time, there was a(n) " + animal + " who was " + age + " years old. This animal loved the color " + color + " and their favorite dessert was " + dessert + "!";
+            }
+        </script>
+        <form name="madlib" id="madlib" action="#" method="get">
+            <p>Favorite Animal: <input type="text" name="favAnimal" id="favAnimal"></p>
+            <p>Age: <input type="number" name="age" id="age"></p>
+            <p>Favorite Color:<br>
+                <input type="radio" name="favColor" id="favColor1" value="red"> Red<br>
+                <input type="radio" name="favColor" id="favColor2" value="blue"> Blue<br>
+                <input type="radio" name="favColor" id="favColor3" value="yellow"> Yellow 
+            </p>
+            <p>Favorite Dessert:<br>
+                <select name="favDessert" id="favDessert">
+                    <option value="ice cream">Ice Cream</option>
+                    <option value="cake">Cake</option>
+                    <option value="candy">Candy</option>
+                </select>
+            </p>
+            <p><input type="button" name="go" id="go" value="Tell Story!" onclick="performMadlib();"></p>
+        </form>
+        <hr>
+        <p id="words"></p>
+    </body>
+</html>
