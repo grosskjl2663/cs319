@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Unit 4 Lab - Task 1</title>
+    </head>
+    <body>
+        <script>
+            function cleanup() {
+                var firstname;
+                var middleinitial;
+                var lastname;
+                var fullname;
+                
+                firstname = document.getElementById("first").value;
+                middleinitial = document.getElementById("middle").value;
+                lastname = document.getElementById("last").value;
+            
+                firstname = firstname.trim();
+                middleinitial = middleinitial.trim();
+                lastname = lastname.trim();
+
+                firstname = firstname.toUpperCase();
+                middleinitial = middleinitial.toUpperCase();
+                lastname = lastname.toUpperCase();
+
+                fullname = firstname + " " + middleinitial + " " + lastname;
+                document.getElementById("full").value = fullname;
+            }
+        </script>
+        <form name="name" id="name" action="#" method="get">
+            <p>First Name:<br><input type="text" name="firstname" id="first"></p>
+            <p>Middle Initial:<br><input type="text" name="middleinitial" id="middle"></p>
+            <p>Last Name:<br><input type="text" name="lastname" id="last"></p>
+            <input type="button" name="go" id="go" value="Cleanup Name!" onclick="cleanup();">
+            <p>Full Name:<br><input type="text" name="fullname" id="full" readonly></p>
+        </form>
+    </body>
+</html>
