@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Unit 4 Exercise</title>
+        <script>
+            function performMadlib() {
+                var animal = document.madlib.favAnimal.value;
+                var age = document.madlib.age.value;
+                var color = document.madlib.favColor.value;
+                var dessert = document.madlib.favDessert.value;
+                
+                animal = animal.trim();
+                age = age.trim();
+                color = color.trim();
+                dessert = dessert.trim();
+                
+                if (animal == "") {
+                    alert("Please enter your favorite animal.");
+                    document.madlib.favAnimal.focus();
+                    return false;
+                } else if (age == "") {
+                    return false;
+                } else if (color == "") {
+                    return false;
+                } else if (dessert == "") {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form name="madlib" id="madlib" action="http://yoda.cs.uwec.edu/cs319/students/siasmj/echo.php" method="get" onsubmit="return performMadlib();">
+            <p>Favorite Animal: <input type="text" name="favAnimal" id="favAnimal"></p>
+            <p>Age: <input type="number" name="age" id="age"></p>
+            <p>Favorite Color:<br>
+                <input type="radio" name="favColor" id="favColor1" value="red"> Red<br>
+                <input type="radio" name="favColor" id="favColor2" value="blue"> Blue<br>
+                <input type="radio" name="favColor" id="favColor3" value="yellow"> Yellow 
+            </p>
+            <p>Favorite Dessert:<br>
+                <select name="favDessert" id="favDessert">
+                    <option value="ice cream">Ice Cream</option>
+                    <option value="cake">Cake</option>
+                    <option value="candy">Candy</option>
+                </select>
+            </p>
+            <p><input type="submit" name="go" id="go" value="Tell Story!"></p>
+        </form>
+        <hr>
+    </body>
+</html>
