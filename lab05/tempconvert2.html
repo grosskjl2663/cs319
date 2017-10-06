@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Unit 5 Lab - Task 2</title>
+         <script>
+            function tempConvert() {
+                //alert("Hello world!");
+                
+                var tempFahrenheit;
+                var tempCelsius;
+                
+                if (document.getElementById("fToC").checked == true) {
+                    //alert("Hi");
+                    tempFahrenheit = parseFloat(document.converter.fahrenheit.value);
+                    tempCelsius = (tempFahrenheit - 32) * (5/9);
+                    document.converter.celsius.value = tempCelsius;
+                    document.getElementById("celsius").style.backgroundColor = "#f7aab2";
+                    document.getElementById("fahrenheit").style.backgroundColor = "white";
+                } else if (document.getElementById("cToF").checked == true) {
+                    //alert("Hello");
+                    tempCelsius = parseFloat(document.converter.celsius.value);
+                    tempFahrenheit = (tempCelsius * (9/5)) + 32;
+                    document.converter.fahrenheit.value = tempFahrenheit;
+                    document.getElementById("fahrenheit").style.backgroundColor = "#cbdaf2";
+                    document.getElementById("celsius").style.backgroundColor = "white";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Temperature Converter 2.0</h1>
+        <form name="converter" id="converter" action="http://yoda.cs.uwec.edu/cs319/students/siasmj/echo.php" method="get">
+            <p>Temperature in Fahrenheit:<br><input type="number" name="fahrenheit" id="fahrenheit"></p>
+            <p>
+                <input type="radio" name="convertTemp" id="fToC" value="fToC"> F to C<br>
+                <input type="radio" name="convertTemp" id="cToF" value="cToF"> C to F
+            </p>
+            <p>Temperature in Celsius:<br><input type="number" name="celsius" id="celsius"><br>
+            <p><input type="button" name="convert" id="convert" value = "Convert" onclick="tempConvert();"></p>
+        </form>
+    </body>
+</html>
