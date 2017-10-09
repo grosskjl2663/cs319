@@ -13,11 +13,11 @@
                 
                 color = document.form.favColor;
                 
-                if (color.value == "") {
+                if (color.value.trim() == "") {
                     alert("Please enter your favorite color.");
                     color.focus();
                     return false;
-                } else if (isNaN(color.value) == false) {
+                } else if (isNaN(color.value.trim()) == false) {
                     alert("Your input is invalid. Please try again.");
                     color.select();
                     return false;
