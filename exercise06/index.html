@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Unit 6 Exercise</title>
+    </head>
+    <body>
+        <script>
+            function performTask() {
+                //alert("Hello world!");
+                var x;
+                var y;
+                
+                x = 9;
+                y = document.guessTheNumber.userNumber;
+                
+                if (y.value.trim() == "") {
+                    alert("Please enter a number.");
+                    y.focus();
+                    return false;
+               } else if (isNaN(y.value.trim()) == true) {
+                    alert("Please enter a number.");
+                    y.select();
+                    return false;
+               } else if ((y.value.trim()) < 1 || (y.value.trim()) > 10) {
+                    alert("Please enter a number between 1 and 10.");
+                    y.select();
+                    return false;
+               } else if (y.value.trim() < 9) {
+                   alert("Your number is too low. Please guess a higher number.");
+                   y.select();
+                   return false;
+               } else if (y.value.trim() > 9) {
+                   alert("Your number is too high. Please guess a lower number.");
+                   y.select();
+                   return false;
+               } else if (y.value.trim() == 9) {
+                   alert("Congratulations! You guessed the correct number!");
+                   return true;
+               }
+            }
+        </script>
+        <h1>Guess the Number!</h1>
+        <form name="guessTheNumber" id="guessTheNumber" action="#" method="get" onsubmit="return performTask();">
+            <p>Please enter a number: <input type="text" name="userNumber" id="userNumber"></p>
+            <input type="submit" name="submit" id="submit" value="Submit">
+        </form>
+    </body>
+</html>
