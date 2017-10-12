@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Unit 6 Lab - Task 1</title>
+        <script>
+            function formValidate() {
+                //alert("Hello world!");
+                
+                var firstName;
+                var lastName;
+                var emailAddress;
+                var age;
+                
+                firstName = document.form.firstName.value;
+                lastName = document.form.lastName.value;
+                emailAddress = document.form.emailAddress.value;
+                age = document.form.age.value;
+                
+                firstName = firstName.trim();
+                lastName = lastName.trim();
+                emailAddress = emailAddress.trim();
+                age = age.trim();
+                
+                if (firstName == "") {
+                    alert("Please provide your first name.");
+                    document.form.firstName.focus();
+                    return false;
+                } else if (lastName == "") {
+                    alert("Please provide your last name.");
+                    document.form.lastName.focus();
+                    return false;
+                } else if (emailAddress == "") {
+                    alert("Please provide your e-mail address.");
+                    document.form.emailAddress.focus();
+                    return false;
+                } else if (emailAddress.endsWith("@uwec.edu") == false) {
+                    alert("Please provide a valid UW-Eau Claire e-mail address.")
+                    return false;
+                } else if (age == "") {
+                    alert("Please provide your age.");
+                    document.form.age.focus();
+                    return false;
+                } else if (isNaN(age == true)) {
+                    alert("Please provide a number for your age.");
+                    document.form.age.focus();
+                    return false;
+                } else if (age < 18) {
+                    alert("Please provide a number greater than 18.");
+                    document.form.age.focus();
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form name="form" id="form" action="http://www.mattsias.com/echo.php" method="get" onsubmit="return formValidate();">
+            <p>First Name: <input type="text" name="firstName" id="firstName"></p>
+            <p>Last Name: <input type="text" name="lastName" id="lastName"></p>
+            <p>E-mail Address: <input type="text" name="emailAddress" id="emailAddress"></p>
+            <p>Age: <input type="text" name="age" id="age"></p>
+            <input type="submit" name="submit" id="submit" value="Submit!">
+        </form>
+    </body>
+</html>
