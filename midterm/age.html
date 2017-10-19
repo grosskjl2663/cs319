@@ -9,6 +9,8 @@
             function validateAge() {
                 var ageNumber = document.getElementById("age").value;
                 
+                ageNumber = ageNumber.trim();
+                
                 if (ageNumber == "") {
                     alert("Please enter a number.");
                     document.getElementById("age").focus();
